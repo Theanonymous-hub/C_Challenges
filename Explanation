@@ -1,0 +1,12 @@
+# Code explanation
+
+We define the data_packet_t structure representing the data packet with fields for id, data_length, data, and crc. 
+The calculateCRC function calculates the CRC value based on the packet data using a simple XOR-based CRC-16 algorithm.
+
+In the main function, 
+we simulate the transmission and reception of the data packet. 
+First, the CRC is calculated and assigned to the crc field of the original packet.
+Then, the original packet is transmitted and received (simulated here by assigning it to receivedPacket). 
+
+The CRC is recalculated on the received packet, and the calculated CRC is compared with the received CRC. 
+Based on the comparison, a message is printed indicating whether the packet is corrupted or not.
