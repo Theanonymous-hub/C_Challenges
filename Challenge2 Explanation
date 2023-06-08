@@ -1,0 +1,12 @@
+# Explanation
+
+The string_to_date_converter function takes the input string and a pointer to the result_date structure. 
+It uses the strtok function to extract the date, month, and year values from the input string based on the "/" delimiter. 
+The extracted values are then converted from strings to integers using atoi and assigned to the corresponding fields of the result_date structure.
+After the conversion, the function performs additional validation on the values to ensure they are within the correct range (date: 1-31, month: 1-12, year: 0 and above). 
+If any of the values are incorrect, the function returns the INCORRECT status. 
+If either the input string or the result_date pointer is NULL, it returns the NULL_PTR status. Otherwise, if the conversion is successful, it returns the SUCCESS status.
+In the main function, 
+an example usage of the string_to_date_converter function is shown. 
+It provides an input string "20/06/2023" and a result_date structure. 
+The function is called, and based on the returned conversion status, appropriate messages.
